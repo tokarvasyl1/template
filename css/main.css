@@ -1,0 +1,124 @@
+body.lock {
+  touch-action: none;
+  -ms-touch-action: none;
+  overflow-y: hidden;
+}
+
+.wrapper {
+  min-height: 200vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+[class*=__container] {
+  max-width: 1310px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+header {
+  height: 80px;
+}
+header .header__container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+header .logo {
+  display: block;
+  max-width: 20%;
+  width: 100%;
+}
+@media screen and (max-width: 767.98px) {
+  header .menu__nav .menu__body {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease;
+  }
+}
+header .menu__nav .menu__body.opened {
+  left: 0;
+  transition: 0.3s ease;
+}
+header .menu__nav .menu__body .nav__items {
+  display: flex;
+  column-gap: 20px;
+}
+@media screen and (max-width: 767.98px) {
+  header .menu__nav .menu__body .nav__items {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  header .menu__nav .menu__body .nav__items .nav__item {
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+  }
+}
+header .burger__btn {
+  display: none;
+  flex: 0 0 30px;
+  height: 18px;
+  position: relative;
+  z-index: 5;
+}
+@media screen and (max-width: 767.98px) {
+  header .burger__btn {
+    display: block;
+  }
+}
+header .burger__btn span, header .burger__btn::before, header .burger__btn::after {
+  content: "";
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: 0.2s ease;
+}
+header .burger__btn::before {
+  top: 0;
+}
+header .burger__btn::after {
+  bottom: 0;
+}
+header .burger__btn span {
+  top: calc(50% - 1px);
+  background-color: black;
+}
+header .burger__btn.opened span {
+  width: 0;
+  transition: 0.2s ease;
+}
+header .burger__btn.opened:before {
+  top: calc(50% - 1px);
+  transform: rotate(45deg);
+  transition: 0.2s ease;
+}
+header .burger__btn.opened:after {
+  top: calc(50% - 1px);
+  transform: rotate(-45deg);
+  transition: 0.2s ease;
+}
+
+/*# sourceMappingURL=main.css.map */
