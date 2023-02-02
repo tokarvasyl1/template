@@ -114,12 +114,12 @@ header{
     transition: 0.2s ease;
   }
   .burger__btn.opened:before{
-    top: calc(50%);
+    top: calc(50% - 1px);
     transform: rotate(45deg);
     transition: 0.2s ease;
   }
   .burger__btn.opened:after{
-    top: calc(50%);
+    top: calc(50% - 1px);
     transform: rotate(-45deg);
     transition: 0.2s ease;
   }
