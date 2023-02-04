@@ -151,7 +151,6 @@ header {
     }
   }
 
-
   .burger__btn {
     display: none;
     flex: 0 0 30px;
@@ -243,9 +242,16 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: 0.3s;
+
       @include max-screen(1000px){
         width: 27px;
         height: 27px;
+      }
+      &:hover{
+        transition: 0.3s;
+
+        background: #20ADA3;
       }
 
       svg{
@@ -254,15 +260,11 @@ header {
         }
       }
 
-      &:hover {
-        opacity: 0.5;
-      }
     }
 
   }
 
   .how-to-connect {
-
     z-index: 2;
     cursor: pointer;
     height: 47px;
@@ -274,6 +276,8 @@ header {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 23.5px;
     margin-right: 27px;
+    transition: 0.3s;
+
     @include max-screen(1200px){
       margin-right: 15px;
     }
@@ -287,7 +291,9 @@ header {
 
 
     &:hover {
-      opacity: 0.5;
+      transition: 0.3s;
+      background-color: #20ADA3;
+
     }
     a{
       display: flex;
@@ -326,7 +332,6 @@ header {
   }
 
   .template__switch {
-
     cursor: pointer;
     z-index: 2;
     height: 47px;
@@ -337,6 +342,11 @@ header {
     justify-content: center;
     align-items: center;
     padding: 15px 15px 15px 15px;
+    transition: 0.3s;
+    &:hover{
+      transition: 0.3s;
+      background: #20ADA3;
+    }
     @include max-screen(1000px){
       padding: 5px 10px;
       height: 40px;
@@ -364,14 +374,16 @@ header {
       }
     }
   }
+
 }
 
 .main {
   height: 100vh;
-  background: #111216;
+  background: #111216 url("../images/bg/header-bg.png") -100px 150px  no-repeat;
   padding-top: 100px;
   display: flex;
   align-items: center;
+  position: relative;
 
   .main__container {
     position: relative;
@@ -497,8 +509,33 @@ header {
       }
     }
 
-  }
 
+
+  }
+  .scroll__down {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    transform: translate(-50%);
+    animation: mouse 3s infinite;
+
+    @keyframes mouse {
+      0%{
+        bottom: 50px;
+      }
+
+      100%{
+        bottom: 10px;
+      }
+
+    }
+
+    svg {
+      opacity: 0.5;
+    }
+  }
 }
 
 .main-slider {
@@ -573,33 +610,15 @@ header {
   }
 }
 
-.scroll__down {
-  position: absolute;
-  bottom: 15px;
-  left: 5px;
-  display: flex;
-  align-items: center;
 
-  svg {
-    opacity: 0.5;
-    margin-right: 18px;
-  }
-
-  span {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    align-items: center;
-    color: #FFFFFF;
-    opacity: 0.5;
-  }
-}
 
 
 .donat-main {
   padding-top: 29px;
   padding-bottom: 35px;
-
+  background: rgba(255, 255, 255, 0.02);
+  background: url("../images/bg/donat-bg.png")  no-repeat;
+  background-position: bottom 150px right -200px;
 
   .donat-tittle__container {
     margin-bottom: 30px;
@@ -693,11 +712,12 @@ header {
       overflow-y: auto;
 
       &::-webkit-scrollbar {
-        width: 2px;
+        width: 1px;
 
       }
 
       &::-webkit-scrollbar-track {
+        border: 1px solid rgba(255, 255, 255, 0.05);
       }
 
       &::-webkit-scrollbar-thumb {
@@ -1134,7 +1154,9 @@ header {
 
           &::-webkit-scrollbar {
             width: 1px;
-
+          }
+          &::-webkit-scrollbar-track {
+            border: 1px solid rgba(255, 255, 255, 0.05);
           }
 
           &::-webkit-scrollbar-thumb {
@@ -1259,6 +1281,7 @@ header {
                 color: #111216;
               }
             }
+
 
 
 
@@ -1440,9 +1463,7 @@ header {
               @include max-screen(600px){
                 font-size: 11px;
               }
-              @include max-screen(500px){
 
-              }
             }
 
           }
@@ -1491,10 +1512,6 @@ header {
             font-size: 11px;
           }
         }
-
-
-
-
       }
 
     }
@@ -1534,6 +1551,7 @@ header {
       font-size: 14px;
       line-height: 17px;
       color: #FFFFFF;
+      transition: 2s;
       @include max-screen(550px){
         font-size: 12px;
       }
@@ -1592,11 +1610,13 @@ header {
         height: 100px;
         display: flex;
         align-items: center;
+        transition: 0.7s ease;
       }
       .accordion__head{
-        background: #20A49A !important;
+        background: #20A49A;
         color: #111216;
         opacity: 1;
+        transition: all 0.7s ease;
         &:before{
           border-top-color: #fff;
           transform: rotate(180deg);
