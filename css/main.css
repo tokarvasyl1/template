@@ -642,6 +642,8 @@ header .template__switch span {
   width: 97%;
   padding-left: 18px;
   margin-bottom: 15px;
+  cursor: pointer;
+  overflow: hidden;
 }
 @media screen and (max-width: 1000px) {
   .donat-main .donat-info__container .left-side .pre-item {
@@ -693,11 +695,114 @@ header .template__switch span {
   }
 }
 .donat-main .donat-info__container .left-side .pre-item .pre-info {
+  position: relative;
+  height: 100%;
   width: 100%;
   padding-right: 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.donat-main .donat-info__container .left-side .pre-item .pre-info::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  border-radius: 12px;
+  transition: 1s ease;
+}
+.donat-main .donat-info__container .left-side .pre-item .pre-info.active-blue::after {
+  background: #2884D4;
+  width: 94%;
+  transition: 1s;
+}
+@media screen and (max-width: 1000px) {
+  .donat-main .donat-info__container .left-side .pre-item .pre-info.active-blue::after {
+    width: 98%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .donat-main .donat-info__container .left-side .pre-item .pre-info.active-blue::after {
+    width: 100%;
+  }
+}
+.donat-main .donat-info__container .left-side .pre-item .pre-info.active-brown::after {
+  background: #988371;
+  width: 94%;
+  transition: 1s;
+}
+@media screen and (max-width: 1000px) {
+  .donat-main .donat-info__container .left-side .pre-item .pre-info.active-brown::after {
+    width: 98%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .donat-main .donat-info__container .left-side .pre-item .pre-info.active-brown::after {
+    width: 100%;
+  }
+}
+.donat-main .donat-info__container .left-side .pre-item .pre-info.active-yellow::after {
+  background: #FAF51E;
+  width: 94%;
+  transition: 1s;
+}
+@media screen and (max-width: 1000px) {
+  .donat-main .donat-info__container .left-side .pre-item .pre-info.active-yellow::after {
+    width: 98%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .donat-main .donat-info__container .left-side .pre-item .pre-info.active-yellow::after {
+    width: 100%;
+  }
+}
+.donat-main .donat-info__container .left-side .pre-item .pre-info.active-pink::after {
+  background: #FF2382;
+  width: 94%;
+  transition: 1s;
+}
+@media screen and (max-width: 1000px) {
+  .donat-main .donat-info__container .left-side .pre-item .pre-info.active-pink::after {
+    width: 98%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .donat-main .donat-info__container .left-side .pre-item .pre-info.active-pink::after {
+    width: 100%;
+  }
+}
+.donat-main .donat-info__container .left-side .pre-item .pre-info.active-green::after {
+  background: #85F51E;
+  width: 94%;
+  transition: 1s;
+}
+@media screen and (max-width: 1000px) {
+  .donat-main .donat-info__container .left-side .pre-item .pre-info.active-green::after {
+    width: 98%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .donat-main .donat-info__container .left-side .pre-item .pre-info.active-green::after {
+    width: 100%;
+  }
+}
+.donat-main .donat-info__container .left-side .pre-item .pre-info.active-purple::after {
+  background: #7623D4;
+  width: 94%;
+  transition: 1s;
+}
+@media screen and (max-width: 1000px) {
+  .donat-main .donat-info__container .left-side .pre-item .pre-info.active-purple::after {
+    width: 98%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .donat-main .donat-info__container .left-side .pre-item .pre-info.active-purple::after {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 750px) {
   .donat-main .donat-info__container .left-side .pre-item .pre-info {
@@ -708,6 +813,7 @@ header .template__switch span {
   display: flex;
   align-items: center;
   margin-left: 38px;
+  z-index: 2;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -730,6 +836,27 @@ header .template__switch span {
   border: 1px solid #FFFFFF;
   border-radius: 50%;
   margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+.donat-main .donat-info__container .left-side .pre-item .pre-info .pre-item-name .check::after {
+  content: "";
+  display: none;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background: #D9D9D9;
+  transition: 0.3s ease;
+}
+.donat-main .donat-info__container .left-side .pre-item .pre-info .pre-item-name .check.active::after {
+  transition: 0.3s ease;
+  display: inline-block;
+}
+.donat-main .donat-info__container .left-side .pre-item .pre-info .pre-item-name .check.active {
+  opacity: 1;
+  transition: 0.3s ease;
 }
 @media screen and (max-width: 750px) {
   .donat-main .donat-info__container .left-side .pre-item .pre-info .pre-item-name .check {
@@ -743,6 +870,7 @@ header .template__switch span {
   }
 }
 .donat-main .donat-info__container .left-side .pre-item .pre-info .pre-item-name p {
+  margin-left: 5px;
   color: rgba(255, 255, 255, 0.7);
 }
 @media screen and (max-width: 850px) {
@@ -764,6 +892,7 @@ header .template__switch span {
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
+  z-index: 2;
 }
 @media screen and (max-width: 570px) {
   .donat-main .donat-info__container .left-side .pre-item .pre-info .pre-price {
@@ -1077,18 +1206,16 @@ header .template__switch span {
   border-radius: 0 10px 10px 0;
   overflow: hidden;
 }
-.donat-main .donat-info__container .right-side .prev-payment .term .term-item:hover {
+.donat-main .donat-info__container .right-side .prev-payment .term .term-item.active {
+  transition: 1s ease;
   background: #20A49A;
-  transition: 0.3s ease;
 }
-.donat-main .donat-info__container .right-side .prev-payment .term .term-item:hover span {
+.donat-main .donat-info__container .right-side .prev-payment .term .term-item.active span {
   color: #111216;
   opacity: 1;
 }
-.donat-main .donat-info__container .right-side .prev-payment .term .term-item:hover .sale {
+.donat-main .donat-info__container .right-side .prev-payment .term .term-item.active .sale {
   background: #FFB424;
-  opacity: 1;
-  transition: 0.3s ease;
   color: #111216;
 }
 .donat-main .donat-info__container .right-side .prev-payment .term .term-item .sale {

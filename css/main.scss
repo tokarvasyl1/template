@@ -714,6 +714,16 @@ header {
         width: 97%;
         padding-left: 18px;
         margin-bottom: 15px;
+        cursor: pointer;
+        overflow: hidden;
+
+
+
+
+
+
+
+
         @include max-screen(1000px){
           padding-left: 8px;
         }
@@ -755,14 +765,98 @@ header {
         }
 
         .pre-info {
+          position: relative;
+          height: 100%;
           width: 100%;
           padding-right: 18px;
           display: flex;
           align-items: center;
           justify-content: space-between;
+          &::after{
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            display: inline-block;
+            width: 0;
+            height: 100%;
+            border-radius: 12px;
+            transition: 1s ease;
+          }
+          &.active-blue::after{
+            background: #2884D4;
+            width: 94%;
+            transition: 1s;
+            @include max-screen(1000px){
+              width: 98%;
+            }
+            @include max-screen(450px){
+              width: 100%;
+            }
+
+          }
+          &.active-brown::after{
+            background: #988371;
+            width: 94%;
+            transition: 1s;
+            @include max-screen(1000px){
+              width: 98%;
+            }
+            @include max-screen(450px){
+              width: 100%;
+            }
+          }
+          &.active-yellow::after{
+            background: #FAF51E;
+            width: 94%;
+            transition: 1s;
+            @include max-screen(1000px){
+              width: 98%;
+            }
+            @include max-screen(450px){
+              width: 100%;
+            }
+          }
+          &.active-pink::after{
+            background: #FF2382;
+            width: 94%;
+            transition: 1s;
+            @include max-screen(1000px){
+              width: 98%;
+            }
+            @include max-screen(450px){
+              width: 100%;
+            }
+          }
+          &.active-green::after{
+            background: #85F51E;
+            width: 94%;
+            transition: 1s;
+            @include max-screen(1000px){
+              width: 98%;
+            }
+            @include max-screen(450px){
+              width: 100%;
+            }
+          }
+
+          &.active-purple::after{
+            background: #7623D4;
+            width: 94%;
+            transition: 1s;
+            @include max-screen(1000px){
+              width: 98%;
+            }
+            @include max-screen(450px){
+              width: 100%;
+            }
+          }
+
+
           @include max-screen(750px){
             padding-right: 10px;
           }
+
 
 
 
@@ -770,6 +864,7 @@ header {
             display: flex;
             align-items: center;
             margin-left: 38px;
+            z-index: 2;
             @include max-screen(1000px){
               margin-left: 15px;
             }
@@ -785,6 +880,27 @@ header {
               border: 1px solid #FFFFFF;
               border-radius: 50%;
               margin-right: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: 0.3s ease;
+              &::after{
+                content: "";
+                display: none;
+                border-radius: 50%;
+                width: 12px;
+                height: 12px;
+                background: #D9D9D9;
+                transition: 0.3s ease;
+              }
+              &.active::after{
+                transition: 0.3s ease;
+                display: inline-block;
+              }
+              &.active{
+                opacity: 1;
+                transition: 0.3s ease;
+              }
               @include max-screen(750px){
                 width: 15px;
                 height: 15px;
@@ -801,7 +917,7 @@ header {
             line-height: 17px;
 
             p {
-
+              margin-left: 5px;
               color: rgba(255, 255, 255, 0.7);
               @include max-screen(850px){
                 display: flex;
@@ -824,6 +940,7 @@ header {
             font-weight: 600;
             font-size: 14px;
             line-height: 17px;
+            z-index: 2;
             @include max-screen(570px){
               position: absolute;
               top: 3px;
@@ -1129,24 +1246,25 @@ header {
             &:last-of-type{
               border-radius: 0 10px 10px 0;
               overflow: hidden;
-
             }
-            &:hover{
+            &.active{
+              transition: 1s ease;
               background: #20A49A;
-              transition: 0.3s ease;
-
+              & span{
+                color: #111216;
+                opacity: 1;
+              }
+              & .sale{
+                background: #FFB424;
+                color: #111216;
+              }
             }
 
-            &:hover span{
-              color: #111216;
-              opacity: 1;
-            }
-            &:hover .sale{
-              background: #FFB424;
-              opacity: 1;
-              transition: 0.3s ease;
-              color: #111216;
-            }
+
+
+
+
+
 
             .sale{
               position: absolute;
