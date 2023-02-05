@@ -1850,6 +1850,11 @@ header .template__switch span {
     background: #111216;
   }
 }
+@media screen and (max-width: 1200px) {
+  .slider-section {
+    height: 70vh;
+  }
+}
 .slider-section .right-slider {
   position: absolute;
   right: 15px;

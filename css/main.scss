@@ -1820,6 +1820,9 @@ header {
     height: inherit;
     background: #111216
   }
+  @include max-screen(1200px){
+    height: 70vh;
+  }
 
 
   .right-slider{
