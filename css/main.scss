@@ -1635,6 +1635,7 @@ header {
         height: 100px;
         display: flex;
         align-items: center;
+        transition: 0.7s ease;
       }
       .accordion__head{
         background: #20A49A;
@@ -1996,6 +1997,24 @@ header {
 }
 
 
+
+.header{
+  @include max-screen(1000px){
+    border: 1px solid pink;
+  }
+  @include max-screen(900px){
+    border: 1px solid white;
+  }
+  @include max-screen(800px){
+    border: 1px solid green;
+  }
+  @include max-screen(1100px){
+    border: 1px solid blue;
+  }
+  @include max-screen(1200px){
+    border: 1px solid red;
+  }
+}
 
 
 
