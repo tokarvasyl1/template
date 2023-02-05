@@ -391,16 +391,41 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @include max-screen(767.98px){
+      border: 1px solid blue;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+
+    }
 
   }
 
   .main-left {
+    @include max-screen(767.98px){
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+    }
     .online-row {
       display: flex;
       align-items: center;
       margin-bottom: 51px;
+      @include max-screen(767.98px){
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border: 1px solid red;
+        padding: 0 20px 0 20px;
+      }
 
       .online__quantity {
+
 
         span {
           padding: 15px 23px 15px 25px;
@@ -505,6 +530,11 @@ header {
           max-width: 100%;
           font-size: 22px;
         }
+        @include max-screen(767.98px){
+          width: 100%;
+          text-align: center;
+
+        }
 
       }
 
@@ -525,6 +555,10 @@ header {
       padding: 0 20px;
       transition: 0.3s;
       z-index: 2;
+      @include max-screen(767.98px){
+        width: 60%;
+        margin: auto;
+      }
 
       &:hover {
         opacity: 0.5;
@@ -1755,6 +1789,11 @@ header {
   left: 0;
   width: 100%;
   height: 100vh;
+  @include max-screen(767.98px){
+    position: relative;
+    height: inherit;
+    background: #111216
+  }
 
 
   .right-slider{
@@ -1764,7 +1803,6 @@ header {
   .slider__container{
     position: relative;
     height: 100vh;
-    border: 2px solid red;
     .slider{
       position: relative;
       max-width: 545px;
