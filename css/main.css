@@ -46,6 +46,26 @@ header {
     border: 1px solid yellow;
   }
 }
+@media screen and (max-width: 1200px) {
+  header {
+    border: 1px solid green;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header {
+    border: 1px solid blue;
+  }
+}
+@media screen and (max-width: 1000px) {
+  header {
+    border: 1px solid pink;
+  }
+}
+@media screen and (max-width: 1300px) {
+  header {
+    border: 1px solid yellowgreen;
+  }
+}
 header .header__container {
   display: flex;
   justify-content: space-between;

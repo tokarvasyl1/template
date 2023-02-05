@@ -52,6 +52,23 @@ header {
     border: 1px solid yellow;
 
   }
+  @include max-screen(1200px){
+    border: 1px solid green;
+  }
+
+  @include max-screen(1100px){
+    border: 1px solid blue;
+  }
+
+  @include max-screen(1000px){
+    border: 1px solid pink
+  }
+
+  @include max-screen(1300px){
+    border: 1px solid yellowgreen;
+  }
+
+
 
   .header__container {
     display: flex;
