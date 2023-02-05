@@ -179,7 +179,7 @@ var acc = new Accordeon({
 
 
 $(function() {
-    $(".how-to-connect").click(function() {
+    $(".how-to-connect, .how-to-connect-mob").click(function() {
         $(".popup-bg-beginner").addClass("open");
         $('body').addClass("lock");
     })

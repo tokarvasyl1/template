@@ -137,6 +137,72 @@ header .menu__nav .menu__body .nav__items .nav__item > a:hover {
   color: #20ADA3;
   opacity: 1;
 }
+header .how-to-connect-mob {
+  display: none;
+  z-index: 2;
+  cursor: pointer;
+  height: 47px;
+  padding: 15px;
+  align-items: center;
+  color: #FFFFFF;
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 23.5px;
+  margin-right: 27px;
+  transition: 0.3s;
+}
+@media screen and (max-width: 1200px) {
+  header .how-to-connect-mob {
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  header .how-to-connect-mob {
+    height: 40px;
+    padding: 8px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  header .how-to-connect-mob {
+    display: flex;
+  }
+}
+header .how-to-connect-mob:hover {
+  transition: 0.3s;
+  background-color: #20ADA3;
+}
+header .how-to-connect-mob a {
+  display: flex;
+  align-items: center;
+}
+header .how-to-connect-mob span {
+  font-family: "Montserrat", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin-left: 12px;
+  display: flex;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 1200px) {
+  header .how-to-connect-mob span {
+    flex-shrink: 1;
+    width: 70%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1000px) {
+  header .how-to-connect-mob span {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  header .how-to-connect-mob svg {
+    display: none;
+  }
+}
 header .burger__btn {
   display: none;
   flex: 0 0 30px;
