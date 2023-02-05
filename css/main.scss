@@ -49,24 +49,9 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   @include max-screen(768px){
     height: 70px;
-    border: 1px solid yellow;
-
-  }
-  @include max-screen(1200px){
-    border: 1px solid red;
   }
 
-  @include max-screen(1100px){
-    border: 1px solid blue;
-  }
 
-  @include max-screen(1000px){
-    border: 1px solid pink
-  }
-
-  @include max-screen(1300px){
-    border: 1px solid yellowgreen;
-  }
 
 
 
@@ -76,9 +61,6 @@ header {
     height: 100%;
     align-items: center;
     position: relative;
-    @include max-screen(1300px){
-      border: 1px solid greenyellow;
-    }
   }
 
   .logo__row {
@@ -105,11 +87,6 @@ header {
     }
     @include max-screen(767.98px){
       display: block;
-    }
-
-
-    svg {
-      fill: red;
     }
   }
 
@@ -242,9 +219,6 @@ header {
     align-items: center;
     margin-right: 26px;
 
-    @include max-screen(1000px){
-      border: 3px solid red;
-    }
     @include max-screen(1200px){
       margin-right: 15px;
     }
@@ -276,7 +250,6 @@ header {
       }
       &:hover{
         transition: 0.3s;
-
         background: #20ADA3;
       }
 
@@ -303,6 +276,7 @@ header {
     border-radius: 23.5px;
     margin-right: 27px;
     transition: 0.3s;
+
 
     @include max-screen(1200px){
       margin-right: 15px;
@@ -359,7 +333,7 @@ header {
 
   .template__switch {
     cursor: pointer;
-    width: 150px;
+    width: 160px;
     z-index: 2;
     height: 47px;
     background: rgba(255, 255, 255, 0.05);
@@ -370,17 +344,26 @@ header {
     align-items: center;
     padding: 15px 15px 15px 15px;
     transition: 0.3s;
-    border: 1px solid goldenrod;
     &:hover{
       transition: 0.3s;
       background: #20ADA3;
     }
+    @include max-screen(900px){
+      width: 47px;
+      padding: 0;
+    }
     @include max-screen(1000px){
-      padding: 5px 10px;
       height: 40px;
     }
     @include max-screen(767.98px){
       display: none;
+    }
+    &>div{
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     svg{
@@ -399,6 +382,9 @@ header {
       @include max-screen(1000px){
         font-size: 12px;
         margin-left: 10px;
+      }
+      @include max-screen(900px){
+        display: none;
       }
     }
   }
