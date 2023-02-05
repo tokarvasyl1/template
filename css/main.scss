@@ -385,6 +385,7 @@ header {
   align-items: center;
   position: relative;
 
+
   .main__container {
     position: relative;
     width: 100%;
@@ -412,6 +413,9 @@ header {
           background: linear-gradient(90deg, #20ADA3 0%, #E5B044 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          @include max-screen(1000px){
+            font-size: 14px;
+          }
 
           &::after {
             position: absolute;
@@ -453,6 +457,9 @@ header {
           font-size: 16px;
           color: #FFFFFF;
           opacity: 0.7;
+          @include max-screen(1000px){
+            font-size: 14px;
+          }
 
           &:before {
             content: "";
@@ -483,6 +490,22 @@ header {
         align-items: center;
         color: #FFFFFF;
         line-height: 49px;
+        @include max-screen(1250px){
+          font-size: 35px;
+        }
+        @include max-screen(1100px){
+          max-width: 100%;
+          font-size: 30px;
+        }
+        @include max-screen(950px){
+          font-size: 25px;
+          line-height: 35px;
+        }
+        @include max-screen(950px){
+          max-width: 100%;
+          font-size: 22px;
+        }
+
       }
 
       span {
@@ -492,6 +515,7 @@ header {
     }
 
     .main__btn {
+      position: relative;
       background: #20ADA3;
       border-radius: 8px;
       height: 55px;
@@ -499,9 +523,13 @@ header {
       align-items: center;
       justify-content: center;
       padding: 0 20px;
+      transition: 0.3s;
+      z-index: 2;
 
       &:hover {
         opacity: 0.5;
+        transition: 0.3s;
+
       }
 
       svg {
@@ -538,77 +566,7 @@ header {
   }
 }
 
-.main-slider {
-  .main-slider__container {
-    position: relative;
-  }
-}
 
-.slider-bg {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 95vh;
-  max-width: 41%;
-  width: 100%;
-  background: url("../images/main_bg.png");
-
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 0 0 15px 15px;
-
-
-}
-
-
-.img_slider {
-  position: relative;
-  height: 100%;
-  display: flex;
-  padding-top: 100px;
-
-  .slider-main {
-    width: 450px;
-    height: 450px;
-    margin: auto;
-
-    img {
-      display: block;
-      width: 100%;
-    }
-  }
-
-}
-
-.slider-tittle {
-  height: 92px;
-  background: #FFFFFF;
-  border-radius: 0 0 15px 15px;
-  display: flex;
-  align-items: center;
-
-  svg {
-    margin-left: 28px;
-  }
-
-  .tittle-description {
-    margin-left: 18px;
-
-    p {
-      font-style: normal;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 17px;
-      color: #111216;
-
-      span {
-        color: #20ADA3;
-      }
-    }
-  }
-}
 
 
 
@@ -1485,6 +1443,10 @@ header {
           font-size: 14px;
           line-height: 17px;
           color: #000000;
+          transition: 0.3s;
+          &:hover{
+            opacity: 0.5;
+          }
 
           @include max-screen(1250px){
             max-width: 150px;
@@ -1783,6 +1745,157 @@ header {
     }
   }
 }
+
+
+
+
+.slider-section{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+
+  .right-slider{
+    position: absolute;
+    right: 15px;
+  }
+  .slider__container{
+    position: relative;
+    height: 100vh;
+    border: 2px solid red;
+    .slider{
+      position: relative;
+      max-width: 545px;
+      min-width: 80%;
+      border-radius: 0 0 15px 15px;
+      overflow: hidden;
+      @include max-screen(1250px){
+        max-width: 450px;
+      }
+      @include max-screen(1000px){
+        max-width: 380px;
+      }
+      @include max-screen(850px){
+        max-width: 350px;
+      }
+
+
+      .owl-nav{
+        max-width: 64px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        bottom: 30px;
+        right: 15px;
+        .owl-next {
+          width: 20px;
+          height: 20px;
+          background: url("../images/accordion.svg");
+          background-size: cover;
+          transform: rotate(90deg);
+          span{
+            display: none;
+          }
+        }
+        .owl-prev {
+          width: 20px;
+          height: 20px;
+          background: url("../images/accordion.svg");
+          background-size: cover;
+          transform: rotate(-90deg);
+          span{
+            display: none;
+          }
+
+        }
+      }
+      .owl-dots{
+        position: absolute;
+        bottom: 72px;
+        display: flex;
+        justify-content: space-between;
+        height: 20px;
+        width: 100%;
+        .owl-dot{
+          height: 3px;
+          width: 100%;
+          background: #111216;
+          opacity: 0.4;
+          &.active{
+            background: #111216;
+            opacity: 0.6;
+          }
+        }
+
+
+        span{
+          width: 400px;
+          display: none;
+        }
+      }
+      .slider-item{
+        width: 100%;
+        min-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .top{
+          flex: 1 1 auto;
+          padding-top: 130px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(-45deg, #CBB051, #48AE90, #23a6d5, #23d5ab);
+          background-size: 200% 200%;
+          animation: gradient 5s ease infinite;
+          @keyframes gradient {
+            0% {
+              background-position: 0 50%;
+            }
+            50% {
+              background-position: 100% 50%;
+            }
+            100% {
+              background-position: 0 50%;
+            }
+          }
+          img{
+            display: block;
+            width: 65%;
+          }
+        }
+        .bottom{
+          height: 92px;
+          background-color: white;
+          display: flex;
+          align-items: center;
+          padding: 0 28px;
+          svg{
+            margin-right: 17px;
+          }
+          p{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            align-items: center;
+            color: #111216;
+            span{
+              color: #20ADA3;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
 
 
 
