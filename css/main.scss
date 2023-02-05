@@ -1579,7 +1579,6 @@ header {
       font-size: 14px;
       line-height: 17px;
       color: #FFFFFF;
-      transition: 2s;
       @include max-screen(550px){
         font-size: 12px;
       }
@@ -1618,7 +1617,6 @@ header {
         bottom: 0;
         margin: auto;
         right: 20px;
-        transition: 0.3s;
       }
     }
 
@@ -1627,7 +1625,6 @@ header {
       padding: 0 25px;
       height: 0;
       overflow: hidden;
-      transition: 0.3s;
     }
 
 
@@ -1638,13 +1635,11 @@ header {
         height: 100px;
         display: flex;
         align-items: center;
-        transition: 0.7s ease;
       }
       .accordion__head{
         background: #20A49A;
         color: #111216;
         opacity: 1;
-        transition: all 0.7s ease;
         &:before{
           border-top-color: #fff;
           transform: rotate(180deg);
