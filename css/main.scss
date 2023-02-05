@@ -1931,7 +1931,7 @@ header {
         flex-direction: column;
         justify-content: space-between;
         @include max-screen(1200px){
-          min-height: 50vh;
+          min-height: auto;
         }
         @include max-screen(767.98px){
           min-height: 75vh;
