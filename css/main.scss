@@ -2149,11 +2149,11 @@ header {
     width: 70%;
   }
   @include max-screen(767.98px){
-    height: 90%;
+    height: 60%;
     width: 80%;
   }
   @include max-screen(400px){
-    height: 90%;
+    height: 60%;
     width: 90%;
   }
 
@@ -2175,9 +2175,11 @@ header {
     width: 95%;
     height: 70%;
     margin: auto;
+    overflow: hidden;
     overflow-y: auto;
     padding-right: 17px;
     padding-left: 17px;
+    border: 1px solid red;
     &::-webkit-scrollbar {
       width: 1px;
 

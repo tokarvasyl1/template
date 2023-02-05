@@ -2156,13 +2156,13 @@ header .template__switch span {
 }
 @media screen and (max-width: 767.98px) {
   .popup-bg-beginner .popup-content {
-    height: 90%;
+    height: 60%;
     width: 80%;
   }
 }
 @media screen and (max-width: 400px) {
   .popup-bg-beginner .popup-content {
-    height: 90%;
+    height: 60%;
     width: 90%;
   }
 }
@@ -2183,9 +2183,11 @@ header .template__switch span {
   width: 95%;
   height: 70%;
   margin: auto;
+  overflow: hidden;
   overflow-y: auto;
   padding-right: 17px;
   padding-left: 17px;
+  border: 1px solid red;
 }
 .popup-bg-beginner .popup-content .popup-info::-webkit-scrollbar {
   width: 1px;
