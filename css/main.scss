@@ -47,8 +47,10 @@ header {
   backdrop-filter: blur(15px);
   z-index: 2;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  @include max-screen(767.98px){
+  @include max-screen(768px){
     height: 70px;
+    border: 1px solid yellow;
+
   }
 
   .header__container {
@@ -1817,7 +1819,6 @@ header {
   .right-slider{
     position: absolute;
     right: 15px;
-    border: 2px solid red;
     @include max-screen(767.98px){
       position: relative;
       right: 0;
@@ -1837,7 +1838,6 @@ header {
       max-width: 545px;
       border-radius: 0 0 15px 15px;
       overflow: hidden;
-      border: 2px solid blue;
 
       @include max-screen(1250px){
         max-width: 450px;
