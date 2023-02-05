@@ -185,7 +185,7 @@ $(function() {
     })
     $(".close-popup").click(function() {
         $(".popup-bg-beginner").removeClass("open");
-        $('body').removeClass("lock");
+        $('body').removeClass("lock-bg");
     })
 })
 
@@ -193,7 +193,7 @@ $(document).mouseup(function (e) {
     var container = $(".popup-content");
     if (container.has(e.target).length === 0){
         $('.popup-bg-beginner').removeClass('open')
-        $('body').removeClass('lock')
+        $('body').removeClass('lock-bg')
     }
 });
 

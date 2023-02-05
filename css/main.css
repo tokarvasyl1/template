@@ -8,6 +8,11 @@ body.lock {
   -ms-touch-action: none;
   overflow-y: hidden;
 }
+body.lock-bg {
+  touch-action: none;
+  -ms-touch-action: none;
+  overflow-y: hidden;
+}
 
 .wrapper {
   min-height: 100vh;
