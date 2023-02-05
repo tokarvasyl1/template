@@ -64,6 +64,9 @@ $('.checked-purple').click(function () {
 
 $('.owl-carousel').owlCarousel({
     loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplaySpeed: 2000,
     nav: true,
     responsive: {
         0: {
