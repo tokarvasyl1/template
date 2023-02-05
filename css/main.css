@@ -226,6 +226,11 @@ header .header__social {
   align-items: center;
   margin-right: 26px;
 }
+@media screen and (max-width: 1300px) {
+  header .header__social {
+    border: 3px solid greenyellow;
+  }
+}
 @media screen and (max-width: 1200px) {
   header .header__social {
     margin-right: 15px;
