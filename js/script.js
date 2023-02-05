@@ -7,6 +7,8 @@ $(function () {
 });
 
 
+
+
 $(function() {
     $(".donat-item").click(function() {
         $(".donat-item").removeClass("active");
@@ -171,3 +173,25 @@ var Accordeon = function (parrams) {
 var acc = new Accordeon({
     //closeSiblings: false,
 });
+
+
+$(function() {
+    $(".how-to-connect").click(function() {
+        $(".popup-bg-beginner").addClass("open");
+        $('body').addClass("lock");
+    })
+    $(".close-popup").click(function() {
+        $(".popup-bg-beginner").removeClass("open");
+        $('body').removeClass("lock");
+    })
+})
+
+$(document).mouseup(function (e) {
+    var container = $(".popup-content");
+    if (container.has(e.target).length === 0){
+        $('.popup-bg-beginner').removeClass('open')
+        $('body').removeClass('lock')
+    }
+});
+
+
