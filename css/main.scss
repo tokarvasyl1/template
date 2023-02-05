@@ -1700,7 +1700,16 @@ header {
         align-items: center;
         margin-right: 39px;
         max-width: 45px;
-        width: 100%
+        width: 100%;
+        @include max-screen(600px){
+          margin-right: 22px;
+        }
+
+        img{
+          @include max-screen(600px){
+            width: 60%;
+          }
+        }
 
       }
 
@@ -1714,9 +1723,6 @@ header {
         opacity: 0.7;
         background: rgba(255, 255, 255, 0.05);
         border-radius: 21px;
-        //@include max-screen(1000px) {
-        //  font-size: 12px;
-        //}
         @include max-screen(870px) {
           font-size: 10px;
         }

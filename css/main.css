@@ -1691,6 +1691,16 @@ header .template__switch span {
   max-width: 45px;
   width: 100%;
 }
+@media screen and (max-width: 600px) {
+  .footer .footer__container .footer-left a {
+    margin-right: 22px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer .footer__container .footer-left a img {
+    width: 60%;
+  }
+}
 .footer .footer__container .footer-left p {
   position: relative;
   display: flex;
