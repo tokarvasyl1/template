@@ -1637,6 +1637,7 @@ header .template__switch span {
   padding: 0 25px;
   height: 0;
   overflow: hidden;
+  transition: 0.5s ease;
 }
 .question .accordion--active .accordion__content {
   padding: 23px 24px;
