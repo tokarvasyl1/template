@@ -7,23 +7,19 @@ $(function () {
 });
 
 
-
-
-$(function() {
-    $(".donat-item").click(function() {
+$(function () {
+    $(".donat-item").click(function () {
         $(".donat-item").removeClass("active");
         $(this).toggleClass("active");
     })
 })
 
-$(function() {
-    $(".term-item").click(function() {
+$(function () {
+    $(".term-item").click(function () {
         $(".term-item").removeClass("active");
         $(this).toggleClass("active");
     })
 })
-
-
 
 
 $('.checked-blue').click(function () {
@@ -58,28 +54,52 @@ $('.checked-purple').click(function () {
 });
 
 
-
-
-
-
-$('.owl-carousel').owlCarousel({
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    autoplaySpeed: 2000,
-    nav: true,
-    responsive: {
-        0: {
-            items: 1
-        },
-        600: {
-            items: 1
-        },
-        1000: {
-            items: 1
+$(document).ready(function () {
+    $('.header-slider').owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplaySpeed: 2000,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
         }
-    }
-})
+    })
+
+    $('.limited').owlCarousel({
+        loop: true,
+        margin: 15,
+        responsiveClass:true,
+        // autoplay: true,
+        // autoplayTimeout: 5000,
+        // autoplaySpeed: 2000,
+        stagePadding: 50,
+        nav: true,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 2
+            }
+        }
+    })
+});
+
+
+
 
 
 const filterBox = document.querySelectorAll('.filter');
@@ -178,12 +198,12 @@ var acc = new Accordeon({
 });
 
 
-$(function() {
-    $(".how-to-connect, .how-to-connect-mob").click(function() {
+$(function () {
+    $(".how-to-connect, .how-to-connect-mob").click(function () {
         $(".popup-bg-beginner").addClass("open");
         $('body').addClass("lock");
     })
-    $(".close-popup").click(function() {
+    $(".close-popup").click(function () {
         $(".popup-bg-beginner").removeClass("open");
         $('body').removeClass("lock-bg");
     })
@@ -191,7 +211,7 @@ $(function() {
 
 $(document).mouseup(function (e) {
     var container = $(".popup-content");
-    if (container.has(e.target).length === 0){
+    if (container.has(e.target).length === 0) {
         $('.popup-bg-beginner').removeClass('open')
         $('body').removeClass('lock-bg')
     }
