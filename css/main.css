@@ -1689,11 +1689,15 @@ header .template__switch span {
   display: flex;
   align-items: center;
   margin-right: 20px;
+  border: 2px solid red;
 }
 @media screen and (max-width: 600px) {
   .footer .footer__container .footer-left a {
     margin-right: 0;
   }
+}
+.footer .footer__container .footer-left a svg {
+  border: 2px solid blue;
 }
 @media screen and (max-width: 600px) {
   .footer .footer__container .footer-left a svg {

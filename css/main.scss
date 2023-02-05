@@ -1675,12 +1675,14 @@ header {
         display: flex;
         align-items: center;
         margin-right: 20px;
+        border: 2px solid red;
 
 
         @include max-screen(600px){
           margin-right: 0;
         }
         svg{
+          border: 2px solid blue;
           @include max-screen(600px){
             width: 40%;
           }
