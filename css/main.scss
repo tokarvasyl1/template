@@ -392,7 +392,6 @@ header {
     display: flex;
     justify-content: space-between;
     @include max-screen(767.98px){
-      border: 1px solid blue;
       flex-direction: column;
       height: 100%;
       justify-content: center;
@@ -420,7 +419,6 @@ header {
         top: 0;
         left: 0;
         width: 100%;
-        border: 1px solid red;
         padding: 0 20px 0 20px;
       }
 
@@ -440,6 +438,13 @@ header {
           -webkit-text-fill-color: transparent;
           @include max-screen(1000px){
             font-size: 14px;
+          }
+          @include max-screen(767.98px){
+            font-size: 16px;
+          }
+          @include max-screen(450px){
+            font-size: 10px;
+            padding: 15px;
           }
 
           &::after {
@@ -485,6 +490,12 @@ header {
           @include max-screen(1000px){
             font-size: 14px;
           }
+          @include max-screen(767.98px){
+            font-size: 16px;
+          }
+          @include max-screen(450px){
+            font-size: 12px;
+          }
 
           &:before {
             content: "";
@@ -493,6 +504,9 @@ header {
             height: 15px;
             border-left: 1px solid #FFFFFF;
             opacity: 0.1;
+            @include max-screen(767.98px){
+              display: none;
+            }
           }
 
           &:after {
@@ -558,6 +572,10 @@ header {
       @include max-screen(767.98px){
         width: 60%;
         margin: auto;
+      }
+      @include max-screen(500px){
+        width: 80%;
+
       }
 
       &:hover {
@@ -1799,16 +1817,28 @@ header {
   .right-slider{
     position: absolute;
     right: 15px;
+    border: 2px solid red;
+    @include max-screen(767.98px){
+      position: relative;
+      right: 0;
+      display: flex;
+      justify-content: center;
+    }
   }
   .slider__container{
     position: relative;
     height: 100vh;
+    @include max-screen(767.98px){
+    height: inherit;
+      margin-bottom: 50px;
+    }
     .slider{
       position: relative;
       max-width: 545px;
-      min-width: 80%;
       border-radius: 0 0 15px 15px;
       overflow: hidden;
+      border: 2px solid blue;
+
       @include max-screen(1250px){
         max-width: 450px;
       }
@@ -1817,6 +1847,16 @@ header {
       }
       @include max-screen(850px){
         max-width: 350px;
+      }
+      @include max-screen(767.98px){
+        max-width: 75%;
+        border-radius: 15px;
+      }
+      @include max-screen(600px){
+        max-width: 90%;
+      }
+      @include max-screen(600px){
+        max-width: 100%;
       }
 
 
@@ -1829,6 +1869,9 @@ header {
         position: absolute;
         bottom: 30px;
         right: 15px;
+        @include max-screen(400px){
+          display: none;
+        }
         .owl-next {
           width: 20px;
           height: 20px;
@@ -1881,6 +1924,9 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @include max-screen(767.98px){
+          min-height: 75vh;
+        }
         .top{
           flex: 1 1 auto;
           padding-top: 130px;
@@ -1890,6 +1936,9 @@ header {
           background: linear-gradient(-45deg, #CBB051, #48AE90, #23a6d5, #23d5ab);
           background-size: 200% 200%;
           animation: gradient 5s ease infinite;
+          @include max-screen(767.98px){
+            padding-top: 0;
+          }
           @keyframes gradient {
             0% {
               background-position: 0 50%;
@@ -1912,6 +1961,9 @@ header {
           display: flex;
           align-items: center;
           padding: 0 28px;
+          @include max-screen(600px){
+            padding: 0 10px;
+          }
           svg{
             margin-right: 17px;
           }
@@ -1922,6 +1974,10 @@ header {
             line-height: 17px;
             align-items: center;
             color: #111216;
+            @include max-screen(430px){
+              font-size: 12px;
+            }
+
             span{
               color: #20ADA3;
             }
