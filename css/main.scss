@@ -242,8 +242,8 @@ header {
     align-items: center;
     margin-right: 26px;
 
-    @include max-screen(1200px){
-      border: 3px solid red;
+    @include max-screen(1100px){
+      border: 3px solid yellow;
     }
     @include max-screen(1200px){
       margin-right: 15px;
