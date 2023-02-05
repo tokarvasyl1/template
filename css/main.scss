@@ -1666,6 +1666,8 @@ header {
     justify-content: space-between;
 
     .footer-left{
+      max-width: 360px;
+      border: 1px solid red;
       display: flex;
       align-items: center;
       justify-content: space-between;;
@@ -1705,6 +1707,7 @@ header {
         opacity: 0.7;
         background: rgba(255, 255, 255, 0.05);
         border-radius: 21px;
+        border: 1px solid white;
         @include max-screen(1000px){
           font-size: 12px;
         }
@@ -1815,6 +1818,7 @@ header {
   left: 0;
   width: 100%;
   height: 100vh;
+  border: 2px solid red;
   @include max-screen(767.98px){
     position: relative;
     height: inherit;
