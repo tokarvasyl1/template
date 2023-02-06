@@ -81,18 +81,23 @@ $(document).ready(function () {
         // autoplay: true,
         // autoplayTimeout: 5000,
         // autoplaySpeed: 2000,
-        stagePadding: 50,
+
         nav: true,
         dots: true,
         responsive: {
-            0: {
-                items: 1
+            300: {
+                items: 1,
+                stagePadding: 35,
             },
-            600: {
-                items: 1
+
+            767: {
+                items: 2,
+                stagePadding: 40,
             },
+
             1000: {
-                items: 2
+                items: 2,
+                stagePadding: 50,
             }
         }
     })
@@ -201,7 +206,7 @@ var acc = new Accordeon({
 $(function () {
     $(".how-to-connect, .how-to-connect-mob").click(function () {
         $(".popup-bg-beginner").addClass("open");
-        $('body').addClass("lock");
+        $('body').addClass("lock-bg");
     })
     $(".close-popup").click(function () {
         $(".popup-bg-beginner").removeClass("open");
