@@ -247,7 +247,7 @@ $(document).ready(function($){
     $('.ip__server').click(function() {
         var $text_copy = $(this);
         var $temp = $("<input>");
-        $("body").append($temp);
+        // $("body").append($temp);
         $temp.val($text_copy.text()).select();
         document.execCommand("copy");
         $temp.remove();
