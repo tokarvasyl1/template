@@ -150,7 +150,7 @@ header {
           line-height: 20px;
           color: #111216;
           opacity: 0.7;
-          transition: 1s;
+          transition: color 1s;
           @include max-screen(767.98px) {
             width: 100%;
             display: flex;
@@ -2107,7 +2107,6 @@ header {
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
-    //color: #FFFFFF; dark
     color: #000000;
     margin-bottom: 30px;
 
@@ -2165,7 +2164,7 @@ header {
         background: rgba(32, 173, 163, 0.1);
       }
 
-      &:before {
+      &::before {
         content: '';
         display: block;
         width: 20px;
