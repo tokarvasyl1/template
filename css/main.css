@@ -769,7 +769,7 @@ header .template__switch .black_words {
 @media screen and (max-width: 767.98px) {
   .slider-section .slider__container {
     height: inherit;
-    padding: 10px 0 10px 0;
+    padding: 10px 15px;
   }
 }
 .slider-section .slider__container .slider {

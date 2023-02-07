@@ -812,7 +812,7 @@ header {
     height: 100vh;
     @include max-screen(767.98px) {
       height: inherit;
-      padding: 10px 0 10px 0;
+      padding: 10px 15px;
 
     }
 
