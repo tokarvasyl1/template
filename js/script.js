@@ -262,9 +262,15 @@ $(document).ready(function($){
 $(function () {
     $('.template__switch').click(function () {
         $('body').toggleClass('dark')
-
     });
 });
+
+
+
+
+
+
+
 
 
 
